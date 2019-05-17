@@ -10,7 +10,6 @@ public class EnemyBullet : MonoBehaviour {
 	void Start ()
     {
         Destroy(gameObject, 36);
-
     }
 	
 	// Update is called once per frame
@@ -27,4 +26,6 @@ public class EnemyBullet : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    
 }

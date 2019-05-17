@@ -15,13 +15,13 @@ public class BossOven : MonoBehaviour {
         Debug.Log("D");
         yield return new WaitForSeconds(1F);
         LCloud = GameObject.Instantiate(AtkCloud, LHolder.transform.position, Quaternion.identity);
-        LCloud.GetComponent<EnemyController>().targetPos = new Vector2(-1.98F,3.97F);
+        LCloud.GetComponent<EnemyController>().targetPos = new Vector2(-2.4F,3F);
         yield return new WaitForSeconds(0.6F);
         LCloud = null;
 
         yield return new WaitForSeconds(1.5F);
         RCloud = GameObject.Instantiate(AtkCloud, RHolder.transform.position, Quaternion.identity);
-        RCloud.GetComponent<EnemyController>().targetPos = new Vector2(1.98F, 3.97F);
+        RCloud.GetComponent<EnemyController>().targetPos = new Vector2(2.4F, 3F);
         yield return new WaitForSeconds(0.6F);
         RCloud = null;
         yield return new WaitForSeconds(1.3F);

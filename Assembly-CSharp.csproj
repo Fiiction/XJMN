@@ -60,11 +60,13 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Scripts\Bullets\BigFork.cs" />
-     <Compile Include="Assets\Scripts\Bullets\CandyBall.cs" />
-     <Compile Include="Assets\Scripts\Bullets\EnemyBullet.cs" />
+     <Compile Include="Assets\Scripts\Bullets\Enemy\BigFork.cs" />
+     <Compile Include="Assets\Scripts\Bullets\Enemy\CandyBall.cs" />
+     <Compile Include="Assets\Scripts\Bullets\Enemy\EnemyBullet.cs" />
+     <Compile Include="Assets\Scripts\Bullets\Enemy\EnemyTriggerBullet.cs" />
+     <Compile Include="Assets\Scripts\Bullets\Enemy\MusicNote.cs" />
+     <Compile Include="Assets\Scripts\Bullets\Enemy\OvenFire.cs" />
      <Compile Include="Assets\Scripts\Bullets\Friendly\FriendlyBullet.cs" />
-     <Compile Include="Assets\Scripts\Bullets\MusicNote.cs" />
      <Compile Include="Assets\Scripts\Cameras\LevelCamera.cs" />
      <Compile Include="Assets\Scripts\Enemy\Angel.cs" />
      <Compile Include="Assets\Scripts\Enemy\AngelsManager.cs" />
@@ -123,8 +125,14 @@
  <Reference Include="com.unity.multiplayer-hlapi.Editor">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ugui">
+ <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.ugui.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -150,6 +158,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VisualStudio.Editor">
+ <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
@@ -159,23 +173,11 @@
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ugui">
- <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.ugui.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.ugui.Editor">
  <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/Unity.ugui.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+ <HintPath>F:/Pro/Unity_/XJMN_pre/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/2019.2.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
