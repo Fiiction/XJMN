@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BossOven : MonoBehaviour {
 
-    public enum State { Idle, DragCloud };
+    public enum State { Idle, DragCloud ,Fire };
     public State state = State.Idle;
     public float idleTime = 4F;
-    GameObject player, AtkCloud;
+    GameObject player, AtkCloud, Fire;
     public GameObject LHolder, RHolder, LCloud, RCloud;
     Animator anim;
     IEnumerator DragCloudCoroutine()
     {
-        Debug.Log("D");
+        anim.SetBool("dragCloud", true);
         yield return new WaitForSeconds(1F);
         LCloud = GameObject.Instantiate(AtkCloud, LHolder.transform.position, Quaternion.identity);
         LCloud.GetComponent<EnemyController>().targetPos = new Vector2(-2.4F,3F);
@@ -24,8 +24,36 @@ public class BossOven : MonoBehaviour {
         RCloud.GetComponent<EnemyController>().targetPos = new Vector2(2.4F, 3F);
         yield return new WaitForSeconds(0.6F);
         RCloud = null;
+
+        anim.SetBool("dragCloud", false);
         yield return new WaitForSeconds(1.3F);
         SetState(State.Idle);
+    }
+
+    float fireAngle = -2.8F;
+    void GenerateFire()
+    {
+        fireAngle += Random.Range(0.21F, 0.3F);
+        if (fireAngle > -0.4F)
+            fireAngle -= 2.8F;
+        Vector3 pos = transform.position;
+        pos += new Vector3(Random.Range(-1F, 1F), Random.Range(-0.5F, 0.5F));
+        var obj = GameObject.Instantiate(Fire, pos, Quaternion.identity, transform);
+        obj.GetComponent<OvenFire>().angle = fireAngle;
+    }
+
+    IEnumerator FireCoroutine()
+    {
+        anim.SetBool("fire", true);
+        yield return new WaitForSeconds(0.3F);
+
+        for(int i =1;i<=64;i++)
+        {
+            GenerateFire();
+            yield return new WaitForSeconds(0.08F);
+        }
+        anim.SetBool("fire", false);
+
     }
 
     public void SetState(State s)
@@ -38,7 +66,9 @@ public class BossOven : MonoBehaviour {
                 break;
             case State.DragCloud:
                 StartCoroutine(DragCloudCoroutine());
-                anim.SetBool("dragCloud", false);
+                break;
+            case State.Fire:
+                StartCoroutine(FireCoroutine());
                 break;
         }
 
@@ -50,6 +80,7 @@ public class BossOven : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         AtkCloud = Resources.Load<GameObject>("Prefabs/Enemy/DarkCloud");
+        Fire = Resources.Load<GameObject>("Prefabs/Bullet/EnemyBullet/Fire");
     }
 
     Vector3 LLastFramePos, RLastFramePos;
@@ -80,7 +111,7 @@ public class BossOven : MonoBehaviour {
             case State.Idle:
                 idleTime -= Time.deltaTime;
                 if (idleTime <= 0)
-                    anim.SetBool("dragCloud", true);
+                    SetState(State.Fire);
                 break;
             case State.DragCloud:
                 break;    
