@@ -102,6 +102,7 @@
      <Compile Include="Assets\Scripts\Others\BlurBrushGenerator.cs" />
      <Compile Include="Assets\Scripts\Others\DamagingTrigger.cs" />
      <Compile Include="Assets\Scripts\Others\Face.cs" />
+     <Compile Include="Assets\Scripts\Others\FadeIn.cs" />
      <Compile Include="Assets\Scripts\Others\Vortex.cs" />
      <Compile Include="Assets\Scripts\Others\VortexParticle.cs" />
      <Compile Include="Assets\Scripts\Others\VortexParticleManager.cs" />

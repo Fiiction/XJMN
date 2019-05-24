@@ -21,8 +21,8 @@ public class OvenFire : MonoBehaviour
     {
         if (moving)
         {
-            angle += 0.32F * Time.fixedDeltaTime;
-            body.velocity = 3.6F * new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            angle += 0.44F * Time.fixedDeltaTime;
+            body.velocity = 4.8F * new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
         }
     }
 
