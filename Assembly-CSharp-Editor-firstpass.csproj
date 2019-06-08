@@ -72,9 +72,6 @@
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.ugui">
- <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.ugui.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
@@ -86,12 +83,6 @@
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
@@ -114,11 +105,20 @@
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
- <Reference Include="Unity.ugui.Editor">
- <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.ugui.Editor.dll</HintPath>
- </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ugui">
+ <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.ugui.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ugui.Editor">
+ <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Library/ScriptAssemblies/Unity.ugui.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/2019.2.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -305,6 +305,9 @@
  </Reference>
  <Reference Include="UnityEditor.WebGL.Extensions">
  <HintPath>C:/Program Files/Unity/2019.2.0b1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/2019.2.0b1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
  <HintPath>F:/GameDesign/XJMN_pre_NEW/XJMN/Assets/Demigiant/DOTween/DOTween.dll</HintPath>

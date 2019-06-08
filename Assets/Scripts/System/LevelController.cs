@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour {
 
-    public IEnumerator[] Waves = {EnemyWaves.Dessert_WelcomeClouds(), EnemyWaves.Dessert_JCandy_And_CakeSlice() };
+    public IEnumerator[] Waves = {EnemyWaves.Dessert_WelcomeClouds(), EnemyWaves.Dessert_JCandy_And_CakeSlice() ,
+    EnemyWaves.Dessert_Candy_CakeSlice(),EnemyWaves.Dessert_CandyBasketWithJCandy()};
 
     IEnumerator WaveCoroutine()
     {
@@ -25,8 +26,8 @@ public class LevelController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        Debug.Log(EnemyController.EnemyCnt);
-
-	}
+	void Update ()
+    {
+        Debug.Log("Enemy Cnt = " + EnemyController.EnemyCnt.ToString());
+    }
 }

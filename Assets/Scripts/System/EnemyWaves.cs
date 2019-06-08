@@ -33,7 +33,6 @@ public class EnemyWaves {
         rdc.GetComponent<EnemyController>().targetPos = new Vector2(2.7F, 7F);
     }
 
-
     public static IEnumerator Dessert_JCandy_And_CakeSlice()
     {
         GameObject JC = Resources.Load<GameObject>("Prefabs/Enemy/DessertPlanet/J_Candy");
@@ -51,7 +50,6 @@ public class EnemyWaves {
 
         while (EnemyController.EnemyCnt > 1)
         {
-            Debug.Log("!" + EnemyController.EnemyCnt.ToString());
             yield return 0;
         }
 
@@ -70,4 +68,23 @@ public class EnemyWaves {
         mjc.GetComponent<EnemyController>().targetPos = new Vector2(0F, 7.7F);
     }
 
+    public static IEnumerator Dessert_Candy_CakeSlice()
+    {
+        GameObject CW = Resources.Load<GameObject>("Prefabs/Enemy/DessertPlanet/CandyWrapper");
+        GameObject CS = Resources.Load<GameObject>("Prefabs/Enemy/DessertPlanet/CakeSlice");
+
+        var cw = GameObject.Instantiate(CW, new Vector3(0, 12F), Quaternion.identity);
+        cw.GetComponent<EnemyController>().targetPos = new Vector2(0, 7F);
+
+        yield return new WaitForSeconds(10F);
+
+        var lcs = GameObject.Instantiate(CS, new Vector3(-2.3F, 11F), Quaternion.identity);
+        lcs.GetComponent<CakeSlice>().idlePos = new Vector2(-2.3F, 5.6F);
+
+        yield return new WaitForSeconds(3F);
+
+        var rcs = GameObject.Instantiate(CS, new Vector3(2.3F, 11F), Quaternion.identity);
+        rcs.GetComponent<CakeSlice>().idlePos = new Vector2(2.3F, 4.6F);
+
+    }
 }

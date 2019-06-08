@@ -17,6 +17,8 @@ public class CandyWrapper : MonoBehaviour {
         GetComponent<EnemyController>().moveForceMagnitude /= 3;
         GetComponent<Rigidbody2D>().mass /= 3;
         GetComponent<SpriteRenderer>().sprite = openSprite;
+        GetComponent<BoxCollider2D>().enabled = true;
+        
         gameObject.layer = 12;
         GameObject.Instantiate(ball, transform.position, Quaternion.identity);
     }

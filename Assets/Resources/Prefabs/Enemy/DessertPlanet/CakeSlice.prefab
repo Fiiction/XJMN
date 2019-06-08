@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4097184191300006}
   - component: {fileID: 60247560177195712}
   - component: {fileID: 114517369574131096}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: CakeSlice_AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 50887474459047464}
   - component: {fileID: 114797519034800258}
   - component: {fileID: 1134169235161748988}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: CakeSlice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5149331058395611231}
   - component: {fileID: 6274583107336094387}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 997496485480672020}
   - component: {fileID: 8729176586903329210}
   - component: {fileID: 7855518893419850456}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1459662364345275925}
   - component: {fileID: 5001501277507714460}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5428452908277369213}
   - component: {fileID: 1115524767788264998}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4458731650504430325}
   - component: {fileID: 5333071915275477789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
