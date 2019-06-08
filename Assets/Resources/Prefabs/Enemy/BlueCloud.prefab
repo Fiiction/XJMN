@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 60284702346799874}
   - component: {fileID: 247853345325308966}
   m_Layer: 11
-  m_Name: CloudBlue
+  m_Name: BlueCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 5
   m_LinearDrag: 1
   m_AngularDrag: 2
   m_GravityScale: 0
@@ -119,11 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPart: 0
   Master: {fileID: 0}
-  health: 6
-  moveByTarget: 0
-  targetPos: {x: 0, y: 5}
+  health: 8
+  moveByTarget: 1
+  targetPos: {x: 0, y: -5}
   targetRot: 0
-  moveForceMagnitude: 40
+  moveForceMagnitude: 0
   moveTorque: 0.3
   collideDamage: 5
   logPosDiff: 0
@@ -285,5 +285,5 @@ ConstantForce2D:
   m_GameObject: {fileID: 1994603718753944}
   m_Enabled: 1
   m_Force: {x: 0, y: 0}
-  m_RelativeForce: {x: 0, y: -1.4}
+  m_RelativeForce: {x: 0, y: -5}
   m_Torque: 0
