@@ -17,6 +17,9 @@ public class EnemyController : MonoBehaviour {
     public Color spriteColor = Color.white;
     Rigidbody2D body;
     SpriteRenderer sr;
+
+    public static int EnemyCnt = 0;
+
     public void Damage(float dmg)
     {
         if (isPart)
@@ -28,8 +31,14 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
+    void Awake()
+    {
+        EnemyCnt++;
+    }
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         body = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 	}
@@ -130,6 +139,11 @@ public class EnemyController : MonoBehaviour {
                     , collidePoint, ForceMode2D.Impulse);
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        EnemyCnt--;
     }
 
 }
