@@ -39,7 +39,7 @@ public class CandyBall : MonoBehaviour {
             body.velocity = body.velocity.magnitude * vel.normalized;
         }
         vel = vel.normalized * V;
-        body.AddForce(vel*10);
+        body.AddForce(vel*12);
         Debug.Log(body.velocity.magnitude);
     }
     private void OnCollisionEnter2D(Collision2D collision)
