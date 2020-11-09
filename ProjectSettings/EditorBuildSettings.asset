@@ -5,19 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/testLevel1.unity
-    guid: 917e0379a3b1df644bfb5f83b7d1381e
-  - enabled: 0
-    path: Assets/Scenes/testBossScene.unity
-    guid: cd383bfa72bb1db4a96639d443412795
-  - enabled: 0
-    path: Assets/Scenes/testLevel2.unity
-    guid: 95eb6308b04d8c846b95b8bbd07bf5c0
   - enabled: 1
-    path: Assets/Scenes/testWitch.unity
-    guid: 1c91bae854daac940ba325aa84956d8d
+    path: Assets/Scenes/Alpha/Menu.unity
+    guid: 88f2e0d0e10c2244e9b26f073a5916f7
+  - enabled: 1
+    path: Assets/Scenes/Alpha/Level_Blackhole.unity
+    guid: d3cc241018108334394aa1d797b96712
+  - enabled: 1
+    path: Assets/Scenes/Alpha/Level_1-1.unity
+    guid: fff543b913945c74d95ffd9b8fad9ddf
+  - enabled: 1
+    path: Assets/Scenes/Alpha/Level_Witch.unity
+    guid: 4d488a35ad4838f4e836629c0ff07d39
+  - enabled: 1
+    path: Assets/Scenes/Alpha/Level_UFO.unity
+    guid: 68174fd498ee69143bc1a92fd5895833
+  - enabled: 1
+    path: Assets/Scenes/Alpha/Level_Angels.unity
+    guid: e560f74edab08e44c888e9280ecf09f7
   m_configObjects: {}

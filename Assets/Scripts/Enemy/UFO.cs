@@ -10,6 +10,7 @@ public class UFO : MonoBehaviour {
     bool isAiming = false,arrivedTargetPos;
     float aimAlpha;
     public GameObject Aim, Beam;
+    public Rigidbody2D body;
 
     float phase;
     Vector2 targetPos;
@@ -26,6 +27,7 @@ public class UFO : MonoBehaviour {
 
     void Start () {
         Beam.SetActive(false);
+        body = GetComponent<Rigidbody2D>();
         //StartCoroutine(BeamCoroutine());
 	}
 
@@ -58,6 +60,11 @@ public class UFO : MonoBehaviour {
 
         }
         
+    }
+
+    void FixedUpdate()
+    {
+        body.AddTorque(-0.2F * body.rotation);
     }
 
 	// Update is called once per frame

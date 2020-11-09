@@ -21,7 +21,7 @@ public class UFOBeam : MonoBehaviour {
         if (obj.layer == 8 || obj.layer == 11)
         {
             if (obj.GetComponent<Rigidbody2D>())
-                obj.GetComponent<Rigidbody2D>().AddForce(8F * (transform.rotation * Vector2.down), ForceMode2D.Impulse);
+                obj.GetComponent<Rigidbody2D>().AddForce(5F * (transform.rotation * Vector2.down), ForceMode2D.Impulse);
         }
 
     }

@@ -8,7 +8,7 @@ public class DessertWitch : MonoBehaviour {
     BossController BC;
     GameObject Bullet, Fork, player;
     float maxHealth = 20;
-    int period = 0;
+    int phase = 0;
     int forkCnt = 0;
     // Use this for initialization
 
@@ -19,7 +19,7 @@ public class DessertWitch : MonoBehaviour {
 
         var obj = GameObject.Instantiate(Bullet, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody2D>().velocity = vec;
-        if(period <= 1)
+        if(phase <= 1)
             GetComponent<Rigidbody2D>().AddForce(vec * -0.34F, ForceMode2D.Impulse);
         else
             GetComponent<Rigidbody2D>().AddForce(vec * -0.28F, ForceMode2D.Impulse);
@@ -38,7 +38,7 @@ public class DessertWitch : MonoBehaviour {
         yield return new WaitForSeconds(6F);
         while (true)
         {
-            switch (period)
+            switch (phase)
             {
                 case 0:
                     WC.SetState(WitchController.State.Attack);
@@ -110,7 +110,7 @@ public class DessertWitch : MonoBehaviour {
                         }
                         forkCnt++;
                         if (forkCnt >= 4)
-                            period = 2;
+                            phase = 2;
                         yield return new WaitForSeconds(0.35F);
                         WC.SetState(WitchController.State.Dodge);
                         yield return new WaitForSeconds(Random.Range(5F, 7F));
@@ -148,9 +148,10 @@ public class DessertWitch : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (BC.health <= maxHealth * 0.6 && period <= 0)
-            period = 1;
+        if (BC.health <= maxHealth * 0.6 && phase <= 0)
+            phase = 1;
 
-
+        if (GetComponent<BossController>().health <= 0)
+            Destroy(gameObject);
     }
 }

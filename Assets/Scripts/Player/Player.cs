@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     float lastDamageTime = -999F;
     void PlayerDeath()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(0);
     }
 
     public void Damage(float dmg)

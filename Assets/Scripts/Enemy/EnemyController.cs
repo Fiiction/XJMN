@@ -119,7 +119,8 @@ public class EnemyController : MonoBehaviour {
             }
             
         }
-        
+        if (!moveByTarget && transform.position.y <= -10F)
+            Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -120,7 +120,7 @@ MonoBehaviour:
   isPart: 0
   Master: {fileID: 0}
   health: 8
-  moveByTarget: 1
+  moveByTarget: 0
   targetPos: {x: 0, y: -5}
   targetRot: 0
   moveForceMagnitude: 0
@@ -284,6 +284,6 @@ ConstantForce2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994603718753944}
   m_Enabled: 1
-  m_Force: {x: 0, y: 0}
-  m_RelativeForce: {x: 0, y: -5}
+  m_Force: {x: 0, y: -5}
+  m_RelativeForce: {x: 0, y: 0}
   m_Torque: 0
