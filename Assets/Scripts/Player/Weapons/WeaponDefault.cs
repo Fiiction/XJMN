@@ -7,6 +7,7 @@ public class WeaponDefault : MonoBehaviour {
     PlayerInterface pInterface;
     Rigidbody2D body;
     public float shootInterval = 0.25F, bulletSpeed = 8F;
+    public float recoil = 3f;
     float lastShootTime;
     GameObject Bullet;
     Vector2 direction;
@@ -27,7 +28,7 @@ public class WeaponDefault : MonoBehaviour {
 
         obj.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
 
-        body.AddForce(direction * -2.5F, ForceMode2D.Impulse);
+        body.AddForce(direction * -recoil, ForceMode2D.Impulse);
 
         lastShootTime = Time.time;
     }
